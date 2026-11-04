@@ -13,6 +13,8 @@ Designer / Tasarım: **Eren Ağalar**
 
 **[⬇️ Download / İndir](https://github.com/eren-agalar/UPO/releases/latest)** · [English](#-english) · [Türkçe](#-türkçe)
 
+⭐ **If you like UPO, give it a star! · UPO'yu beğendiysen yıldız ver!** ⭐
+
 </div>
 
 ---
