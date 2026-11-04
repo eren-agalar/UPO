@@ -1,0 +1,10 @@
+global using System.Drawing;
+global using System.Drawing.Drawing2D;
+global using System.Windows.Forms;
+global using System.Text;
+global using System.Diagnostics;
+global using System.Text.RegularExpressions;
+global using Microsoft.Win32;
+global using FpsAtolyesi.Core;
+global using FpsAtolyesi.UI;
+global using static FpsAtolyesi.UI.Theme;
