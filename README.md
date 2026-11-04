@@ -19,7 +19,7 @@ Designer / Tasarım: **Eren Ağalar**
 
 ---
 
-# EN English
+# 🇬🇧 English
 
 ## What is UPO?
 UPO scans the Windows settings and background load that affect gaming performance, gives your system a **score out of 100**, and applies the missing optimizations with **one click**. It also cleans caches, repairs Windows, tests your hardware and tells you whether an upgrade is worth it.
