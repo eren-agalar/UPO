@@ -79,9 +79,10 @@ public class HeaderBar : HControl
         using (var path = G.Cut(b2, P(6))) using (var b = new SolidBrush(Yellow)) g.FillPath(b, path);
         G.Text(g, t2, FSmallBold, Ink, b2, TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
         x = b2.Right + P(8);
-        var b3 = new Rectangle(x, b2.Y, P(42), P(24));
+        var vText = "v" + MainForm.AppVersion;
+        var b3 = new Rectangle(x, b2.Y, G.Measure(vText, FSmallBold).Width + P(16), P(24));
         using (var p = new Pen(Cyan)) g.DrawRectangle(p, b3);
-        G.Text(g, "v" + MainForm.AppVersion, FSmallBold, Cyan, b3, TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+        G.Text(g, vText, FSmallBold, Cyan, b3, TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
 
         // Skor çipi
         int cw = P(120);
@@ -146,7 +147,7 @@ public class MainForm : Form
     public const string Designer = "Eren Ağalar";
     /// <summary>Komut satırı: --page N (1-10) veya bir .upobackup dosyası.</summary>
     public static string[] StartArgs = Array.Empty<string>();
-    public static readonly string AppVersion = typeof(MainForm).Assembly.GetName().Version is Version v ? $"{v.Major}.{v.Minor}" : "1.0";
+    public static readonly string AppVersion = Updater.CurrentVersion;
     public bool Busy { get; private set; }
     public event Action BusyChanged;
     string busyLabel;
@@ -223,6 +224,13 @@ public class MainForm : Form
     {
         base.OnShown(e);
         Log.W(L.F("UPO · Ultimate Performance Optimizer v{0} başlatıldı.", AppVersion));
+        // Güncellemeden sonraki ilk açılışta haber ver.
+        if (State.Data.LastVersion != AppVersion)
+        {
+            if (State.Data.LastVersion != null && UpdateManifest.IsNewer(AppVersion, State.Data.LastVersion))
+                Log.Ok(L.F("[OK] UPO v{0} sürümüne güncellendi (önceki: v{1}).", AppVersion, State.Data.LastVersion));
+            State.Data.LastVersion = AppVersion; State.Save();
+        }
         Log.Dim(L.F("Yedek klasörü: {0}", Paths.Data));
         if (Backup.Entries.Count > 0) Log.Dim(L.F("Önceki oturumlardan {0} yedek kaydı var (Modül 08 ile geri alınabilir).", Backup.Entries.Count));
         AppState.Scanned += r => { header.Score = r.Score; header.Invalidate(); status.Invalidate(); };

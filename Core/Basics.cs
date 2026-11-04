@@ -114,6 +114,7 @@ public class AppData
     public List<string> CreatedSchemes = new();
     public DateTime? LastRestorePoint;
     public BenchResult LastBench;
+    public string LastVersion;
 }
 
 public static class State

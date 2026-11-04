@@ -16,7 +16,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <LangVersion>latest</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <Version>1.5.0</Version>
+    <Version>1.5.1</Version>
     <Product>UPO - Ultimate Performance Optimizer</Product>
     <Authors>Eren Ağalar</Authors>
     <Company>Eren Ağalar</Company>

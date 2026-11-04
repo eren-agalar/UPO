@@ -12,7 +12,7 @@ ${UnStrStr}
 
 !define APPNAME   "UPO"
 !define FULLNAME  "UPO - Ultimate Performance Optimizer"
-!define VERSION   "1.5.0"
+!define VERSION   "1.5.1"
 !define PUBLISHER "Eren Ağalar"
 !define UNINSTKEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\UPO"
 

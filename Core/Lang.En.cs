@@ -515,5 +515,6 @@ public static partial class L
         ["İndirme iptal edildi."] = "Download cancelled.",
         ["Güncelleme indirmesi iptal edildi."] = "Update download cancelled.",
         ["Güncelleme başarısız: "] = "Update failed: ",
+        ["[OK] UPO v{0} sürümüne güncellendi (önceki: v{1})."] = "[OK] UPO updated to v{0} (previous: v{1}).",
     };
 }
