@@ -138,10 +138,10 @@ UPO **refuses** any update whose signature doesn't match the key built into the 
 
 **Where does UPO store its data?** In `C:\ProgramData\UPO` (backups, settings, score history). Nothing is stored online.
 
-## 🛠️ For developers
-- Modules, settings and building from source: [docs/GELISTIRICI.md](docs/GELISTIRICI.md) *(Turkish)*
-- Publishing and signing a new release: [RELEASE.md](RELEASE.md) *(Turkish)*
-- Built with C# / .NET 8 (WinForms) · installer: NSIS · update signing tool: `tools/UpoSign`
+## 🐞 Feedback
+Found a bug or have an idea? Open an **[Issue](https://github.com/eren-agalar/UPO/issues)**. Please include your Windows version and, if possible, a screenshot of the live log.
+
+UPO is built with C# / .NET 8. The source code is maintained privately; this repository hosts the official releases.
 
 ---
 
@@ -266,10 +266,10 @@ UPO, imzası uygulamanın içindeki anahtarla eşleşmeyen hiçbir güncellemeyi
 
 **UPO verilerini nerede saklıyor?** `C:\ProgramData\UPO` klasöründe (yedekler, ayarlar, skor geçmişi). İnternette hiçbir şey saklanmaz.
 
-## 🛠️ Geliştiriciler için
-- Modüller, ayarlar ve kaynaktan derleme: [docs/GELISTIRICI.md](docs/GELISTIRICI.md)
-- Yeni sürüm yayınlama ve imzalama: [RELEASE.md](RELEASE.md)
-- C# / .NET 8 (WinForms) ile yazıldı · kurulum: NSIS · güncelleme imzalama aracı: `tools/UpoSign`
+## 🐞 Geri bildirim
+Bir hata mı buldun ya da bir fikrin mi var? Bir **[Issue](https://github.com/eren-agalar/UPO/issues)** aç. Lütfen Windows sürümünü ve mümkünse canlı kaydın ekran görüntüsünü ekle.
+
+UPO, C# / .NET 8 ile geliştirildi. Kaynak kod gizli tutulur; bu depo resmi sürümleri barındırır.
 
 ---
 
